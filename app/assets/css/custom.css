@@ -8,15 +8,23 @@ body {
 }
 
 body {
-    background-image: url(../images/abrale_ale.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center top;
-    background-color: #78676b;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size:12px
+}
+.logo{
+    background-image: url(../images/logo_home.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.ale{
+    background-image: url(../images/abrale_ale.png);
+    background-repeat: no-repeat;
+    background-size: 240px;
+    background-position: center;
+    background-color: #78676b;
 }
 .audio{
     display:none
@@ -78,13 +86,13 @@ body {
         height: 40px;
     }
     to {
-        height: 75%
+        height: 85%
     }
 }
 
 @keyframes popup_close {
     from {
-        height: 75%;
+        height: 85%;
     }
     to {
         height: 40px
@@ -114,7 +122,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 75%;
+    height: 85%;
     overflow-y: scroll;
     padding-top: 10px;
 }
