@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var isOpen = false;
+
     $('.chat-header').click(function () {
         if (isOpen) {
             isOpen = false;

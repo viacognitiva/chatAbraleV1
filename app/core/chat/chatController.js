@@ -13,11 +13,14 @@
             vm.displayMessage   = displayMessage;
             vm.newEvent         = newEvent;
             vm.sendMessage      = sendMessage;
+            vm.controlaAbreFecha = controlaAbreFecha;
 
             vm.imgSom = 'fa fa-volume-off';
             vm.ativaVoz = false;
             vm.showSom = false;
             vm.showLog = false;
+            vm.abreFecha = {'animation-name': 'popup_open'};
+            vm.isOpen = true;
 
             var params = {};
             var context = '';
@@ -128,10 +131,7 @@
                      userBox.className = 'direct-chat-name pull-left';
                      div0.className = 'direct-chat-msg right';
                      div.className = 'direct-chat-text';
-                     var img = document.createElement('img');
-                     img.className = 'direct-chat-img';
-                     img.src = 'assets/images/img_usuario.png';
-                     div0.appendChild(img);
+
                      div0.appendChild(div);
 
                      userBox.appendChild(user);
@@ -150,9 +150,6 @@
 
                     var user = document.createTextNode(' ');
                     var userBox = document.createElement('span');
-                    user = document.createElement('img');
-                    user.className = 'direct-chat-img';
-                    user.src = 'assets/images/logo_fb.jpg';
                     div.className = 'direct-chat-text';
 
                     userBox.appendChild(user);
@@ -240,6 +237,16 @@
                    vm.imgSom = 'fa fa-volume-up';
                }
 
+           }
+
+           function controlaAbreFecha(){
+               if(vm.isOpen){
+                   vm.isOpen = false;
+                   vm.abreFecha = {'animation-name': 'popup_close'};
+               }else{
+                   vm.isOpen = true;
+                   vm.abreFecha = {'animation-name': 'popup_open'};
+               }
            }
 
            function showSound(){
