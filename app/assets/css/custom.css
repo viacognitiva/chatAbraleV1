@@ -56,9 +56,23 @@ body {
     border-width: 1px 1px 0px 1px;
     border-style: solid;
     border-color: #e6e6e6;
-
 }
-
+.dataHora{
+    text-align:right;
+    color:#cfcfcf;
+    font-size:12px
+}
+.dataHoraUser{
+    text-align:left;
+    color:#cfcfcf;
+    font-size:12px;
+}
+.erro{
+    border:2px solid #ffee2b!important;
+}
+.ok{
+    border:0px!important;
+}
 @keyframes popup_open {
     from {
         height: 40px;

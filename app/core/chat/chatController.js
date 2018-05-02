@@ -82,7 +82,8 @@
                     text = text.replace(/(\r\n|\n|\r)/gm, ""); // Remove erroneous characters
 
                     if (text) {
-                        $("#chatInput").css("border-color", "#d2d6de");
+                        $("#chatInput").addClass("ok");
+                        $("#chatInput").removeClass("erro");
                         displayMessage(text, 'user');
                         userInput.value = '';
                         userMessage(text);
@@ -90,7 +91,8 @@
                     } else {
                         console.error("No message.");
                         userInput.value = '';
-                        $("#chatInput").css("border-color", "red");
+                        $("#chatInput").addClass("erro");
+                        $("#chatInput").removeClass("ok");
                         return false;
                     }
                 }
@@ -99,11 +101,13 @@
             function sendMessage() {
 
                 if($("#chatInput").val()==''){
-                    $("#chatInput").css("border-color", "red");
+                    $("#chatInput").addClass("erro");
+                    $("#chatInput").removeClass("ok");
                    return;
                 }
 
-                $("#chatInput").css("border-color", "#d2d6de");
+                $("#chatInput").addClass("ok");
+                $("#chatInput").removeClass("erro");
                 var message = document.getElementById('chatInput');
                 var texto = message.value;
                 texto = texto.replace(/(\r\n|\n|\r)/gm, "");
@@ -123,7 +127,7 @@
 
                      var divHora = document.createElement('div');
                      var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
-                     divHora.style='text-align:left;color:#cfcfcf;font-size:12px;padding-right:50px';
+                     divHora.setAttribute("class", "dataHoraUser" );
                      divHora.appendChild(textHora);
 
                      var user = document.createTextNode(' ');
@@ -183,7 +187,7 @@
 
                         var divHora = document.createElement('div');
                         var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
-                        divHora.style='text-align:right;color:#cfcfcf;font-size:12px';
+                        divHora.setAttribute("class", "dataHora" );
                         divHora.appendChild(textHora);
                         messageBox.appendChild(divHora);
 
@@ -216,7 +220,7 @@
 
                 var divHora = document.createElement('div');
                 var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
-                divHora.style='text-align:right;color:#cfcfcf;font-size:12px';
+                divHora.setAttribute("class", "dataHora" );
                 divHora.appendChild(textHora);
 
                 divEscrevendo.style.display = "none";
