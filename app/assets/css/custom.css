@@ -18,16 +18,16 @@ body {
     position:relative
 }
 .divLeft{
-    height:90%;
+    height:100%;
     position:fixed;
     bottom:0
 }
 .logo{
     background-image: url(../images/logo_home.png);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-color:#fff;
-    height:60%
+    height:65%
 }
 .ale{
     background-image: url(../images/abrale_ale.png);
@@ -35,23 +35,22 @@ body {
     background-size: 240px;
     background-position: center;
     position:fixed;
-    right:15%
+    right:11%
 }
 .textoImportante{
     background-color:rgb(201, 139, 134);
     padding: 10px;
     color:#ffff;
     font-size:16px;
-    height:35%;
     vertical-align: middle;
+    height:30%
 }
 .copyright{
     text-align:center;
     color:#fff;
     background-color:rgb(199, 26, 65);
-    padding:5px 0;
-    height:5%;
-    top:auto
+    padding:8px 0;
+    height:5%
 }
 h3{
     line-height: normal;
@@ -70,7 +69,7 @@ h3.header span::before {
     display: inline-block;
     top: 30px;
     left: 0;
-    width: 15%;
+    width: 18%;
     height: 3px;
     background: #a81f42;
 }
