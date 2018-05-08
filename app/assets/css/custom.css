@@ -8,47 +8,87 @@ body {
 }
 
 body {
-    background-color: #fff;
+    background-color: #78676b;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size:12px
 }
+.row{
+    position:relative
+}
+.divLeft{
+    height:90%;
+    position:fixed;
+    bottom:0
+}
 .logo{
     background-image: url(../images/logo_home.png);
     background-repeat: no-repeat;
     background-position: center center;
+    background-color:#fff;
+    height:60%
 }
 .ale{
     background-image: url(../images/abrale_ale.png);
     background-repeat: no-repeat;
     background-size: 240px;
     background-position: center;
-    background-color: #78676b;
+    position:fixed;
+    right:15%
+}
+.textoImportante{
+    background-color:rgb(201, 139, 134);
+    padding: 10px;
+    color:#ffff;
+    font-size:16px;
+    height:35%;
+    vertical-align: middle;
+}
+.copyright{
+    text-align:center;
+    color:#fff;
+    background-color:rgb(199, 26, 65);
+    padding:5px 0;
+    height:5%;
+    top:auto
+}
+h3{
+    line-height: normal;
+}
+ h3.header {
+    border-bottom: 1px solid #2b2b2b;
+    padding: 0 0 10px;
+    position: relative;
+    color:#fff;
+    font-size:18px
+
+}
+h3.header span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 30px;
+    left: 0;
+    width: 15%;
+    height: 3px;
+    background: #a81f42;
+}
+h3.header span::after {
+    border-color: #a81f42 rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+    bottom: -11px;
+    top: auto;
+    position: absolute;
+    content: " ";
+    width: auto;
+    height: auto;
+    left: 15px;
+    border-width: 5px;
+    border-style: solid;
 }
 .audio{
     display:none
 }
-.container {}
-
-.header {
-    height: 10%;
-    color: #fff;
-    text-align: center;
-}
-
-.main {
-    height: 85%;
-    text-align: center;
-    color: #fff;
-}
-
-.footer {
-    height: 10%;
-    text-align: center;
-    color: #fff;
-}
-
 .chat-popup {
     position: absolute;
     right: 0;
