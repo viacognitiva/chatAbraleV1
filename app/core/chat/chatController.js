@@ -257,7 +257,6 @@
 
                $http.get('/api/showSound').then(
                    function(response){
-                       console.log('showSound: ' + response.data.retorno);
                        if(response.data.retorno == 'true'){
                            vm.showSom = true;
                        }else{
@@ -272,7 +271,6 @@
 
                $http.get('/api/showLog').then(
                    function(response){
-                       console.log('showLog: ' + response.data.retorno);
                        if(response.data.retorno == 'true'){
                            vm.showLog = true;
                        }else{
